@@ -1,9 +1,4 @@
-
 name = "hata-in-nl-api"
 main = "worker.js"
 compatibility_date = "2024-11-01"
 
-[[d1_databases]]
-binding = "DB"
-database_name = "hata-in-nl-db"
-database_id = "803d2224-5633-4a8c-80e6-5c11a8b56639"
