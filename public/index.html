@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -71,7 +72,7 @@
   </div>
 
   <script>
-    const API_URL = "https://workers.dev";
+    const API_URL = "https://hata-in-nl-api.elinaradcenko0.workers.dev/api/listings";
     let currentLang = "ru";
 
     const dict = {
@@ -121,15 +122,15 @@
         countText.innerText = t.found + data.count;
         grid.innerHTML = data.listings.map(item => `
           <div class="card">
-            <img src="${item.image_url || 'https://unsplash.com'}" alt="${item.title}" />
+            <img src="${item.image_url || 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800'}" alt="${item.title}" />
             <div class="card-body">
               <div class="badge">${item.city} • ${item.bedrooms} ${t.beds}</div>
               <div class="card-title">${item.title}</div>
-              <div class="card-loc">${item.address || item.city} (${item.agency_name || 'Agency'})</div>
+              <div class="card-loc">${item.address || item.city}</div>
               <div class="card-desc">${item.description || ''}</div>
               <div class="card-footer">
-                <div class="price">€${item.monthly_rent}<span>${t.month}</span></div>
-                <a class="contact-btn" href="mailto:${item.contact_email || 'info@hatainnl.nl'}?subject=${encodeURIComponent(item.title)}">${t.contact}</a>
+                <div class="price">€${item.rent}<span>${t.month}</span></div>
+                <a class="contact-btn" href="mailto:info@hatainnl.nl?subject=${encodeURIComponent(item.title)}">${t.contact}</a>
               </div>
             </div>
           </div>
@@ -143,3 +144,4 @@
   </script>
 </body>
 </html>
+```
